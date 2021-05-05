@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @pattern.name
+p
+  strong Card:
+  = @pattern.card
+
+=> link_to 'Edit', edit_pattern_path(@pattern)
+'|
+=< link_to 'Back', patterns_path

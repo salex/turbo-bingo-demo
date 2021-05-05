@@ -1,0 +1,15 @@
+= form_for @pattern do |f|
+  - if @pattern.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@pattern.errors.count, "error")} prohibited this pattern from being saved:"
+      ul
+        - @pattern.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :card
+    = f.text_field :card
+  .actions = f.submit

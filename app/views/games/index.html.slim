@@ -1,0 +1,29 @@
+h1 Listing games
+
+table
+  thead
+    tr
+      th Status
+      th Calls
+      th Pattern
+      th State
+      th Json
+      th
+      th
+      th
+
+  tbody
+    - @games.each do |game|
+      tr
+        td = game.status
+        td = game.calls
+        td = game.pattern
+        td = game.state
+        td = game.json
+        td = link_to 'Show', game
+        td = link_to 'Edit', edit_game_path(game)
+        td = link_to 'Destroy', game, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Game', new_game_path

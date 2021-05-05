@@ -1,0 +1,371 @@
+// Place all the styles related to the Games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#home {
+  width:80vw;
+  margin:auto;
+}
+
+.w50 { width:50%;}
+
+.strong {font-weight: bold;}
+$mybody-color: #1B2E4B;
+$dark-color: #3A5497;
+$menu-color: #223B8E;
+$primary-color: lightblue;
+
+input[type='submit']
+{
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   font-family: Georgia, serif;
+
+   background:lime;
+   border-color:green;
+   // padding: 5px 5px;
+   // border-radius: 4px;
+   // font-weight: bold;
+   // font-size: 1.5vw;
+   margin-right: 5px;
+   margin-left: 5px;
+
+ 
+}
+
+
+.link-bar {
+  margin-top:0.3rem;
+  a {
+    color:#204090;
+    margin-right: 0.5rem;
+
+    font-weight: normal;
+    font-size: 2.0vw;
+    text-decoration: none;
+    padding:0.4vw;
+
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid $menu-color;
+    background-color: lighten($menu-color,45%);
+
+    &:hover{
+      color:white;
+      // scale-color(red, $lightness: 34%)!important;
+      background-color: lighten($menu-color,30%);
+    }
+  }
+}
+
+.link-list{
+  a {
+    display:inline-block;
+    margin-right: 5px;
+  }
+  .vbar{
+    display:inline-block;
+    margin-right: 5px;
+    &:after{content:'|';}
+
+  }
+}
+
+td .link-bar {margin:0;}
+
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#container {
+  background-color: black;
+  width: 100vw;
+  height:100vh;
+}
+#footer {
+  background-color: black;
+  color:white;
+}
+button {background-color: lime;border-color: green}
+.button_to {
+  float:left;
+
+}
+
+.color-black {color:black;}
+.color-white {color:white;}
+
+
+$b-color: #1E90FF;
+$i-color: #ff0000;
+$n-color: #FF00FF;
+$g-color: #7CFC00;
+$o-color: orange;
+
+
+.bltr {
+  color:$b-color;
+}
+.iltr {
+  color: $i-color;
+}
+.nltr {
+  color:$n-color;
+}
+.gltr {
+  color:$g-color;
+}
+.oltr {
+  color:$o-color;
+}
+
+.bkg-bltr {
+  background-color:$b-color;
+}
+.bkg-iltr {
+  background-color: $i-color;
+}
+.bkg-nltr {
+  background-color:$n-color;
+}
+.bkg-gltr {
+  background-color:$g-color;
+}
+.bkg-oltr {
+  background-color:$o-color;
+}
+
+.black-card{
+  background-color: black;
+  color:white;
+  width:15vw;
+  &.index{ width:auto; width:8vw;}
+}
+
+#board, #display {
+  width: 100vw;
+  // height: 45vh;
+  background-color: black;
+  // div.col {
+  //   width: 13vw;
+  //   float: left;
+  // }
+
+  #game-status {
+    position: absolute;
+    left: 20vw;
+    top: 0;
+    opacity: 0.85;
+    z-index: 3;
+
+    font-size: 25.0vw;
+    text-align: center;
+    color: yellow;
+  }
+  div.square {
+    width: 5.9vw;
+    float: left;
+    // height: 11vw;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 4.25vw;
+    line-height: 4.75vw;
+    // margin:2px 2px;
+    cursor: pointer;
+    border: solid 1px black;
+    border-radius: 25px;
+    // border: solid 1px black;
+    // margin: 1px;
+  }
+  div.npoint {
+    cursor:none
+  }
+  .num-onb {
+    background-color: lighten($b-color,30%);
+  }
+  .num-oni {
+    background-color: lighten($i-color,30%);
+  }
+  .num-onn {
+    background-color: lighten($n-color,30%);
+  }
+  .num-ong {
+    background-color: lighten($g-color,30%);
+  }
+  .num-ono {
+    background-color: lighten($o-color,30%);
+  }
+
+  .num-on {
+    color:black;
+  }
+
+
+  .num-off {
+    // color:$b-color;
+    opacity: 0.65;
+
+    background-color: #111;
+  }
+
+  .num-offb {
+    color: $b-color;
+  }
+  .num-offi {
+    color: $i-color;
+  }
+  .num-offn {
+    color: $n-color;
+  }
+  .num-offg {
+    color: $g-color;
+  }
+  .num-offo {
+    color: $o-color;
+  }
+
+
+
+}
+#board {
+  cursor:none;
+  div.square{
+    cursor: none;
+  }
+}
+// }
+// header {
+//   color:white;
+//   background-color: black;
+//   height: 6vh;
+// }
+
+//   font-size:5vw;
+
+//   .calls{
+//     width:18vw;
+//     float:left;
+//   }
+//   .previous {
+//     width:50vw;
+//     float:left;
+//   }
+//   .game {
+//     width:16vw;
+//     float:left;
+//   }
+// }
+#status {
+  background-color: black;
+  color: white;
+  // height: 34vh;
+  .title{
+    font-size:2.75vw;
+
+  }
+  .calls{
+    width:15vw;
+    float:left;
+    #curr_call {
+      font-size:10vw;
+      text-align: center;
+      background-color: lawngreen;
+      color:black;
+    }
+  }
+  // .numb-calls{
+  //   width:6.4vw;
+  //   float:left;
+  //   #numb_call{
+  //     color:#000;
+  //     background-color: #fff;
+  //     padding:0 0.9vw;
+  //     font-size: 3.5vw;
+  //   }
+
+
+  // }
+  .called {
+    width:65vw;
+    float:left;
+    margin-left: 1px;
+    font-size: 2.8vw;
+    padding: 0 5px;
+    .r-calls {
+      background-color: #333;
+      padding: 2px 4px;
+      border-right: solid 6px black;
+      float:left;
+    }
+
+    .warn {
+      color:red;
+      font-size: 4.0vw;
+    }
+
+  }
+
+
+  #curr-game {
+    float:left;
+    width:15vw;
+  }
+
+
+
+}
+
+.scaled {
+  font-size: 4.5vh;
+}
+div.clear-fix {clear: both;}
+
+.small-table7 {
+  border-collapse: collapse;
+  width:15vw;
+
+  td, th {
+    width:3vw;
+    padding: 0.2rem;
+    margin:0;
+    line-height:2.1vw;
+    border:solid 1px #ccc;
+    background-color: #333;
+    font-size: 2.0vw;
+    text-align: center;
+  }
+  th {width:1.5vw;}
+}
+
+.tiny-table {
+  border-collapse: collapse;
+  width:8.0vw;
+
+  td, th {
+    width:1.6vw;
+    padding: 0.2vw;
+    margin:0;
+    line-height:0.8vw;
+    border:solid 1px #ccc;
+    background-color: #333;
+    font-size: 0.8vw;
+    text-align: center;
+  }
+}
+
+
+.red {color:red}
+
+.footer {
+  font-size: 4.5vh;
+  color:white
+}
+
+#button-bar{
+  background-color: #000;
+}
+

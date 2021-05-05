@@ -1,0 +1,17 @@
+/ bingos/edit.html.slim
+#container
+  .w3-text-white Hi Caller
+  = turbo_frame_tag 'caller' do
+    #display.w3-row[data-controller="callerBoard"]
+      #game-status = [nil,"Resume","New","Current","current"].include?(@bingo.state) ? nil : @bingo.state
+      - [['B',1],['I',16],['N',31],['G',46],['O',61]].each do |r|
+        - c = r[0].downcase
+        .square class="#{c}ltr npoint" = r[0]
+        - r[1].upto(r[1] + 14) do |i|
+          - id = "#{r[0]}#{i}"
+          - if @bingo.calls.include?(id)
+            .square.num-on(id="#{id}" data-callerBoard-target="toggle" data-action="click->callerBoard#clear" class="num-on#{c}") = i
+          - else
+            .square.num-off(id="#{id}" data-callerBoard-target="toggle" data-action="click->callerBoard#call" class="num-off#{c}") = i
+      = render partial: 'status', locals: {bingo: @bingo}
+      = render partial:"button_bar", locals:{bingo: @bingo}

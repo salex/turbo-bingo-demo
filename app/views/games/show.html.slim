@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Status:
+  = @game.status
+p
+  strong Calls:
+  = @game.calls
+p
+  strong Pattern:
+  = @game.pattern
+p
+  strong State:
+  = @game.state
+p
+  strong Json:
+  = @game.json
+
+=> link_to 'Edit', edit_game_path(@game)
+'|
+=< link_to 'Back', games_path

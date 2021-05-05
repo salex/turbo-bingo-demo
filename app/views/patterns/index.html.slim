@@ -1,0 +1,23 @@
+h1 Listing patterns
+
+table
+  thead
+    tr
+      th Name
+      th Card
+      th
+      th
+      th
+
+  tbody
+    - @patterns.each do |pattern|
+      tr
+        td = pattern.name
+        td = pattern.card
+        td = link_to 'Show', pattern
+        td = link_to 'Edit', edit_pattern_path(pattern)
+        td = link_to 'Destroy', pattern, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Pattern', new_pattern_path

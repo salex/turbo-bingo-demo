@@ -1,0 +1,19 @@
+/ bingos/_button_bar.html.slim
+#button-bar.link-bar
+  - if bingo.state == "Break"
+    = tag.button "Resume", class:'button', data:{action:'click->callerBoard#resume'}
+  - elsif bingo.state == "Bingo"
+    = tag.button "Won", class:'button', data:{action:'click->callerBoard#won'}
+    = tag.button "Resume", class:'button', data:{action:'click->callerBoard#resume'}
+  - elsif bingo.state == "Won"
+    = tag.button "New Game", class:'button', data:{action:'click->callerBoard#newGame'}
+  - else
+    = tag.button "Bingo", class:'button', data:{action:'click->callerBoard#bingo'}
+    = tag.button "Break", class:'button', data:{action:'click->callerBoard#break'}
+    = tag.button "(Home/Games)",  class:'button', data:{action:'click->callerBoard#home'}
+  <form action="/bingo"  method="patch" style="display:none;">
+    <input name="bingo[calls]" type="text" data-callerBoard-target="payload">
+    <input name="bingo[control]" type="text" data-callerBoard-target="control">
+    <input type="submit" value="fire" data-callerBoard-target="submit">
+  </form>
+

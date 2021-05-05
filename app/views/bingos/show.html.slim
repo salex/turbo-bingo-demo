@@ -1,0 +1,5 @@
+/ bingos/show.html.slim
+#container
+  #header.w3-text-white Hi Viewer
+  = turbo_stream_from @bingo
+  = render @bingo, bingo: @bingo
