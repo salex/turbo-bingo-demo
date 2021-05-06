@@ -23,4 +23,7 @@ Things you may want to cover:
 
 * ...
 
-<img src="https://github.com/salex/turbo-bingo-demo/tree/main/app/assets/images/bingoloop.gif" width="600">
+
+
+
+![bingoloop](https://user-images.githubusercontent.com/125716/117353857-48760480-ae76-11eb-9f81-023d26510db9.gif)
