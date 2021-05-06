@@ -146,6 +146,8 @@ $o-color: orange;
   &.index{ width:auto; width:8vw;}
 }
 
+.fright{float:right;}
+
 #board, #display {
   width: 100vw;
   // height: 45vh;
@@ -237,28 +239,7 @@ $o-color: orange;
     cursor: none;
   }
 }
-// }
-// header {
-//   color:white;
-//   background-color: black;
-//   height: 6vh;
-// }
 
-//   font-size:5vw;
-
-//   .calls{
-//     width:18vw;
-//     float:left;
-//   }
-//   .previous {
-//     width:50vw;
-//     float:left;
-//   }
-//   .game {
-//     width:16vw;
-//     float:left;
-//   }
-// }
 #status {
   background-color: black;
   color: white;
@@ -277,18 +258,7 @@ $o-color: orange;
       color:black;
     }
   }
-  // .numb-calls{
-  //   width:6.4vw;
-  //   float:left;
-  //   #numb_call{
-  //     color:#000;
-  //     background-color: #fff;
-  //     padding:0 0.9vw;
-  //     font-size: 3.5vw;
-  //   }
 
-
-  // }
   .called {
     width:65vw;
     float:left;

@@ -1,7 +1,10 @@
 / bingos/_bingo.html.slim
 = turbo_frame_tag dom_id(bingo) do
   #display.w3-row
-    #game-status = [nil,"Resume","New","Current","current"].include?(bingo.state) ? nil : bingo.state
+    - if bingo.calls.blank?
+      #game-status New
+    - else
+      #game-status = [nil,"Resume","New","Current","current"].include?(bingo.state) ? nil : bingo.state
     - [['B',1],['I',16],['N',31],['G',46],['O',61]].each do |r|
       - c = r[0].downcase
       .square class="#{c}ltr npoint" = r[0]
@@ -12,3 +15,5 @@
         - else
           .square.num-off[id="#{id}" class="num-off#{c}"] = i
   = render partial: 'bingos/status', locals: {bingo: bingo}
+  .w3-row-padding
+    = select_tag "pattern", options_for_select(Bingo::OFS,bingo.pattern),class:"fright"

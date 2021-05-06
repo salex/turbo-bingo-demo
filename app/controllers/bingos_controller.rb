@@ -1,6 +1,6 @@
 # contollers.bingos_contoller.rb
 class BingosController < ApplicationController
-  before_action :set_bingo, only: %i[ show edit update caller viewer]
+  before_action :set_bingo, only: %i[ show edit update]
 
   def show
   end
@@ -17,8 +17,17 @@ class BingosController < ApplicationController
         @bingo.calls.delete(call)
       end
     end
+    if params[:bingo][:game].present?
+      @bingo.pattern = params[:bingo][:game]
+    end
     if params[:bingo][:control].present?
-      @bingo.state = params[:bingo][:control]
+      if params[:bingo][:control] == 'New'
+        @bingo.state = ''
+        @bingo.calls = []
+        @bingo.status = 'current'
+      else
+        @bingo.state = params[:bingo][:control]
+      end
     end
     @bingo.save
     render action: :edit
@@ -28,13 +37,9 @@ class BingosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_bingo
-      @bingo = Bingo.current
-      # dev klude ot get curr
-      if @bingo.blank?
-        @bingo = Bingo.last
-        @bingo.state = 'current'
-      end
-    end
+      # the bingo game is always ID 1 for demo
+      @bingo = Bingo.find 1
+     end
 
     # Only allow a list of trusted parameters through.
     def game_params

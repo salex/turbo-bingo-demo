@@ -15,7 +15,7 @@
 
       .title = bingo.updated_at.localtime.strftime("Updated: %B %d at %I:%M %p")
     #curr-game
-      .title = bingo.pattern
+      .title Game
       table.small-table7 
         tr
           th.bltr B
@@ -23,6 +23,6 @@
           th.nltr N
           th.gltr G
           th.oltr O
-        - pattern = Pattern.find_by(name:bingo.pattern) 
-        = pattern_rows(pattern.present? ? pattern.card :  'X..X..X.X...XX.XXXXX...XX')
+        - pattern = bingo.pattern
+        = pattern_rows(pattern.present? ? bingo.pattern :  'X..X..X.X...XX.XXXXX...XX')
 

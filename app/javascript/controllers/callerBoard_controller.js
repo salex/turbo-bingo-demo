@@ -2,7 +2,7 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = ['submit', 'payload', 'control']
+  static targets = ['submit', 'payload', 'control','pattern','game']
 
   connect() {
     console.log("Hello Caller!")
@@ -44,13 +44,14 @@ export default class extends Controller {
     location.assign("/games")
   }
 
-  newGame (){
-    console.log("new game")
-    // not implemented yet
-    // this.controlTarget.value = "New"
-    // this.submitTarget.click()
+  pattern (){
+    this.gameTarget.value = this.patternTarget.value
+    this.submitTarget.click()
   }
 
-
+  newGame (){
+    this.controlTarget.value = "New"
+    this.submitTarget.click()
+  }
 
 }
