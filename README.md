@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+[](https://github.com/salex/turbo-bingo-demo/tree/main/app/assets/images/bingoloop.gif)
