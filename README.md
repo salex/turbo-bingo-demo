@@ -23,4 +23,4 @@ Things you may want to cover:
 
 * ...
 
-[loop](https://github.com/salex/turbo-bingo-demo/tree/main/app/assets/images/bingoloop.gif)
+![](https://github.com/salex/turbo-bingo-demo/tree/main/app/assets/images/bingoloop.gif | width=600)
