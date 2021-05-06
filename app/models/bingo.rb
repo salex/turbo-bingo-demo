@@ -1,9 +1,9 @@
 class Bingo < Game
   broadcasts
 
-  OFS =  [["Regular HVD", "X..X..X.X...XX.XXXXX...XX"],["Little Dimond", ".......X...X.X...X......."], 
+  OFS =  [["Regular RCD", "X..X..X.X...XX.XXXXX...XX"],["Little Dimond", ".......X...X.X...X......."], 
   ["Little Box", "......XXX..X.X..XXX......"], 
-  ["I", "..X....X....X....X....X.."],  
+  ["I", ".XXX...X....X....X...XXX."],  
   ["Large Diamond", "..X...X.X.X...X.X.X...X.."], 
   ["Corners", "X...X...............X...X"], 
   ["Cover All", "XXXXXXXXXXXXXXXXXXXXXXXXX"], 

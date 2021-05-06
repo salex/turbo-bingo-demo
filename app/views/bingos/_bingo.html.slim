@@ -7,7 +7,7 @@
       #game-status = [nil,"Resume","New","Current","current"].include?(bingo.state) ? nil : bingo.state
     - [['B',1],['I',16],['N',31],['G',46],['O',61]].each do |r|
       - c = r[0].downcase
-      .square class="#{c}ltr npoint" = r[0]
+      .square class="#{c}ltr" = r[0]
       - r[1].upto(r[1] + 14) do |i|
         - id = "#{r[0]}#{i}"
         - if bingo.calls.include?(id)
@@ -16,4 +16,4 @@
           .square.num-off[id="#{id}" class="num-off#{c}"] = i
   = render partial: 'bingos/status', locals: {bingo: bingo}
   .w3-row-padding
-    = select_tag "pattern", options_for_select(Bingo::OFS,bingo.pattern),class:"fright"
+    = select_tag "pattern", options_for_select(Bingo::OFS,bingo.pattern),class:"fright",disabled:true

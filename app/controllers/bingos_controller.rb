@@ -25,6 +25,7 @@ class BingosController < ApplicationController
         @bingo.state = ''
         @bingo.calls = []
         @bingo.status = 'current'
+        @bingo.pattern = "X..X..X.X...XX.XXXXX...XX"
       else
         @bingo.state = params[:bingo][:control]
       end

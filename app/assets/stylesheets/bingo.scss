@@ -28,55 +28,17 @@ input[type='submit']
 
    background:lime;
    border-color:green;
-   // padding: 5px 5px;
-   // border-radius: 4px;
-   // font-weight: bold;
-   // font-size: 1.5vw;
    margin-right: 5px;
    margin-left: 5px;
 
  
 }
 
-
-.link-bar {
-  margin-top:0.3rem;
-  a {
-    color:#204090;
-    margin-right: 0.5rem;
-
-    font-weight: normal;
-    font-size: 2.0vw;
-    text-decoration: none;
-    padding:0.4vw;
-
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    border: 1px solid $menu-color;
-    background-color: lighten($menu-color,45%);
-
-    &:hover{
-      color:white;
-      // scale-color(red, $lightness: 34%)!important;
-      background-color: lighten($menu-color,30%);
-    }
-  }
+select {
+  background-color: white;
+  color:black;
 }
 
-.link-list{
-  a {
-    display:inline-block;
-    margin-right: 5px;
-  }
-  .vbar{
-    display:inline-block;
-    margin-right: 5px;
-    &:after{content:'|';}
-
-  }
-}
-
-td .link-bar {margin:0;}
 
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
@@ -99,13 +61,11 @@ button {background-color: lime;border-color: green}
 .color-black {color:black;}
 .color-white {color:white;}
 
-
 $b-color: #1E90FF;
 $i-color: #ff0000;
 $n-color: #FF00FF;
 $g-color: #7CFC00;
 $o-color: orange;
-
 
 .bltr {
   color:$b-color;
@@ -150,12 +110,7 @@ $o-color: orange;
 
 #board, #display {
   width: 100vw;
-  // height: 45vh;
   background-color: black;
-  // div.col {
-  //   width: 13vw;
-  //   float: left;
-  // }
 
   #game-status {
     position: absolute;
@@ -169,20 +124,23 @@ $o-color: orange;
     color: yellow;
   }
   div.square {
-    width: 5.9vw;
+    width: 5.8vw;
     float: left;
-    // height: 11vw;
     text-align: center;
     vertical-align: middle;
     font-size: 4.25vw;
     line-height: 4.75vw;
-    // margin:2px 2px;
     cursor: pointer;
-    border: solid 1px black;
+    border: solid 2px black;
     border-radius: 25px;
-    // border: solid 1px black;
-    // margin: 1px;
+    margin:1px;
+    &:hover{
+      border-color: gray;
+    }
+
+
   }
+
   div.npoint {
     cursor:none
   }
@@ -206,7 +164,6 @@ $o-color: orange;
     color:black;
   }
 
-
   .num-off {
     // color:$b-color;
     opacity: 0.65;
@@ -229,10 +186,8 @@ $o-color: orange;
   .num-offo {
     color: $o-color;
   }
-
-
-
 }
+
 #board {
   cursor:none;
   div.square{
@@ -243,10 +198,8 @@ $o-color: orange;
 #status {
   background-color: black;
   color: white;
-  // height: 34vh;
   .title{
     font-size:2.75vw;
-
   }
   .calls{
     width:15vw;
@@ -276,16 +229,12 @@ $o-color: orange;
       color:red;
       font-size: 4.0vw;
     }
-
   }
-
 
   #curr-game {
     float:left;
     width:15vw;
   }
-
-
 
 }
 
@@ -337,5 +286,11 @@ div.clear-fix {clear: both;}
 
 #button-bar{
   background-color: #000;
+  button {
+    &:hover{
+      background-color: darken(lime,15%);
+    }
+  }
+
 }
 
